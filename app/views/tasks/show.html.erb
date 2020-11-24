@@ -1,0 +1,17 @@
+<h2><%= @task.title %></h2>
+
+    <p>
+      <%= @task.details %>
+    </p>
+
+<% if @task.completed? %>
+  <input type="checkbox" checked>
+  <p style="display:inline">This task is completed</p>
+<% else %>
+  <input type="checkbox" >
+  <p style="display:inline">This task is not completed</p>
+<% end %>
+
+<div class="div">
+  <%= link_to "Back to list", "/index" %>
+</div>
